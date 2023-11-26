@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 p {
-  padding: 8px;
+  padding: 4px;
 }
 body {
   background-position: center center;
@@ -35,12 +35,11 @@ body {
 }
 nav.navbar {
   height: 96px;
+  display: flex;
+  justify-content: center;
 }
 .nav-item {
   margin-left: 20px;
-}
-.nav-item:first-child {
-  margin: 0;
 }
 footer {
   color: #ccc;
@@ -173,6 +172,10 @@ h3 {
   font-size: 38px;
   font-family: 'NEON LED Light', sans-serif;
   text-shadow: 0 0 5px #0bf4f3, 0 0 10px #0bf4f3, 0 0 20px #0bf4f3, 0 0 40px #0bf4f3, 0 0 80px #0bf4f3;
+  margin-bottom: 12px;
+}
+#nanoshowcase {
+  margin-top: 42px;
 }
 .btn-neon {
   color: #eee;
@@ -553,17 +556,17 @@ section.has-text-content:hover{
 }
 }
 .nav-item > a {
-font-size: 20px;
-font-family: 'Aldrich';
-display: inline-block;
-cursor: pointer;
-text-decoration: none;
-color: #ccc;
-padding: 10px 30px;
-border-radius: 0.25em;
-text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.55), 0 0 0.5em;
-box-shadow: 0 0 2px 0px #fff, inset 0 0 2px #fff, 0px 0px 3px 2px #f13292, inset 0 0 10px 1px #f13292, 0 0 3px #f13292, inset 0 0 4px #f13292;
-position: relative;
+  font-size: 20px;
+  font-family: 'Aldrich';
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: #ccc;
+  padding: 10px 30px;
+  border-radius: 0.25em;
+  text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.55), 0 0 0.5em;
+  box-shadow: 0 0 2px 0px #fff, inset 0 0 2px #fff, 0px 0px 3px 2px #f13292, inset 0 0 10px 1px #f13292, 0 0 3px #f13292, inset 0 0 4px #f13292;
+  position: relative;
 }
 .nav-item > a::after {
 content: "";
@@ -585,18 +588,57 @@ opacity: 1;
 }
 
 @media only screen and (max-width: 768px) {
+  .main-container {
+    width: 100%
+  }
   nav.navbar {
       height: 150px
   }
   .nav-item {
-      margin: 0
+      margin: 0 6px;
   }
-  .nav-item:last-child {
-      margin-top: 16px;
-      margin-left: 11px
+  .nav-item > a {
+    font-size: 16px;
   }
 }
-#nanoshowcase {
-  margin-top: 64px;
-  /* margin: 64px 0; */
+@media only screen and (max-width: 575px) {
+  .main-container {
+    margin: 0;
+  }
+  nav.navbar {
+    height: 240px;
+  }
+  .nav {
+    width: 100%;
+    justify-content: left;
+  }
+  .nav-item:first-child {
+    margin: 0 0 10px 0;
+  }
+  .nav-item {
+    margin: 6px 0;
+    width: 100%;
+  }
+  .navbar > ul > li {
+    display: inline;
+  }
+  .navbar > ul > li > a {
+    width: 100%;
+    text-align: center;
+  }
+  .container-links {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .container-links > a {
+    margin-bottom: 20px;
+  }
+  .windows {
+    padding: 8px
+  }
+  .window {
+    padding: 20px;
+    margin: 0 0 20px 0;
+  }
 }
