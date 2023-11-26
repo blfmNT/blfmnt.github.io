@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Pompiere&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/neon-led" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/aldrich" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.5/css/nanogallery2.min.css" integrity="sha512-6sOT9zKSKq1CYgNMqtcY84tFPDnG1yX5mxwdGQiAVpAomVr2kUKJ//pFeU/KfaZDVCOru5iFOVswpT4RWWF2dQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon/android-chrome-512x512.png">
+
+    <!-- merge them -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/test.css">
+    <title></title>
+</head>
+<body>
+
+<div class="noise-bg"></div>
+<div class="container main-container">
+  <nav class="navbar bg-body-transparent bg-body-blurry justify-content-center">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="button" href="#about"><span>About</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="button" href="#projects"><span>Projects</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="button" href="#links"><span>Links</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="button" href="#" data-bs-toggle="modal" data-bs-target="#contacts-modal"><span>Hire Me!</span></a>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="container content has-text-content" id="about">
+    <h3 class="text-center">Freelancer</h3>
+    <p>Small experienced programmer with various interests and skills from Gulagland. Building web applications based on Laravel since 2018. Developing Discord/Telegram bots. Web scrapping. Cyber security enthusiast. Linux user.</p>
+
+    <div class="d-flex justify-content-end">
+      <ul class="list-inline list-skills">
+      </ul>
+    </div>
+
+    <div class="skills-container">
+      <div class="skills-container__progressbars">
+
+        <div class="progressbar">
+          <svg class="progressbar__svg">
+            <circle cx="80" cy="80" r="60" class="progressbar__svg-circle circle-html glow-html"> </circle>
+          </svg>
+          <span class="progressbar__text glow-html">HTML</span>
+        </div>
+
+        <div class="progressbar">
+          <svg class="progressbar__svg">
+            <circle cx="80" cy="80" r="60" class="progressbar__svg-circle circle-php glow-php"> </circle>
+          </svg>
+          <span class="progressbar__text glow-php">PHP</span>
+        </div>
+
+        <div class="progressbar">
+          <svg class="progressbar__svg">
+            <circle cx="80" cy="80" r="60" class="progressbar__svg-circle circle-css glow-css"> </circle>
+          </svg>
+          <span class="progressbar__text glow-css">CSS</span>
+        </div>
+
+        <div class="progressbar">
+          <svg class="progressbar__svg">
+            <circle cx="80" cy="80" r="60" class="progressbar__svg-circle circle-js glow-js"> </circle>
+          </svg>
+          <span class="progressbar__text glow-js">JavaScript</span>
+        </div>
+
+        <div class="progressbar">
+          <svg class="progressbar__svg">
+            <circle cx="80" cy="80" r="60" class="progressbar__svg-circle circle-python glow-python"> </circle>
+          </svg>
+          <span class="progressbar__text glow-python">Python</span>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <section class="container content" id="projects">
+    <h3 class="text-center">Something Ive Made Recently</h3>
+    <div id="nanoshowcase" data-nanogallery2></div>
+  </section>
+
+  <section class="container content" id="links">
+    <h3 class="text-center">Links</h3>
+    <div class="container container-links">
+      <a class="link" href="https://github.com/blfmNT" target="_blank">
+        <img src="/assets/img/logos/github.png" class="img-link"/>
+      </a>
+      <a class="link" href="https://www.codewars.com/users/blfmNT" target="_blank">
+        <img src="/assets/img/logos/codewars.png" class="img-link"/>
+      </a>
+      <a class="link" href="https://app.hackthebox.com/profile/51763" target="_blank">
+        <img src="/assets/img/logos/htb.ico" class="img-link"/>
+      </a>
+      <a class="link" href="https://wakatime.com/@blfmNT" target="_blank">
+        <img src="/assets/img/logos/wakatime.png" class="img-link"/>
+      </a>
+    </div>
+  </section>
+
+  <section class="container content has-text-content" id="tools">
+    <!-- <span class="tools-placeholder">Pretend that you can't c me, coz I'm lazy to add this on the fly</span> -->
+    <h3 class="text-center">Tools</h3>
+    <p>Some text converters I found usefull for me. Nuffin special.</p>
+    <div class="row windows">
+
+      <div class="col-sm window">
+        <div class="title">Ascii</div>
+        <div class="window-body">
+          <textarea name="ascii" id="ascii" class="form-control" height="200"></textarea>
+          <div class="row mt-2">
+            <div class="col col-md-10 col-sm-6 d-flex flex-row-reverse">
+              <input class="form-control" type="number" name="random-str-length" id="random-str-length" min="0" max="4096" step="1" placeholder="Length of random string" />
+            </div>
+            <div class="col col-md-2 col-sm-6 d-flex flex-row-reverse"><button type="button" id="generate-random-string" class="btn btn-neon">Generate</button></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm window">
+        <div class="title">Hex</div>
+        <div class="window-body">
+          <textarea name="hex" id="hex" class="form-control" height="200"></textarea>
+          <select name="" id="hex-format" class="form-select mt-2">
+            <option value="regular">Regular</option>
+            <option value="cpp">C++</option>
+          </select>
+        </div>
+      </div>
+      <div class="w-100"></div>
+      <div class="col-sm window">
+        <div class="title">Base64</div>
+        <div class="window-body">
+          <textarea name="base64" id="base64" class="form-control" height="200"></textarea>
+        </div>
+      </div>
+
+      <div class="col-sm window">
+        <div class="title">Url Encoded</div>
+        <div class="window-body">
+          <textarea name="url-encoded" id="url-encoded" class="form-control" height="200"></textarea>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-body-blurry text-center">
+    Made with luv
+  </footer>
+</div>
+
+<div class="modal fade" id="contacts-modal" aria-hidden="true" aria-labelledby="contacts-modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header justify-content-center">
+        <h5 class="modal-title" id="contacts-modal">Contact me</h5>
+      </div>
+      <div class="modal-body">
+        <ul class="contact-links">
+          <li><a href="https://t.me/blfmNT"><i class="fa-brands fa-telegram"></i></a></li>
+          <li><a href="https://vk.com/blfmNT"><i class="fa-brands fa-vk"></i></a></li>
+          <li><a href="https://discordapp.com/users/870540663123476510"><i class="fa-brands fa-discord"></i></a></li>
+          <li><a href="mailto:getrootordietrying@gmail.com"><i class="fa fa-envelope"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha512-DUC8yqWf7ez3JD1jszxCWSVB0DMP78eOyBpMa5aJki1bIRARykviOuImIczkxlj1KhVSyS16w2FSQetkD4UU2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.5/jquery.nanogallery2.min.js" integrity="sha512-tvpLVnZrWnnNzV2921XEMx4xkFTUF8xg3s+Mi6cvC/R7A6X1FkpBUXPJFa3Xh5uD9BvOZ2tHeYq/5ZqrweW86Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.5/js.cookie.min.js" integrity="sha512-nlp9/l96/EpjYBx7EP7pGASVXNe80hGhYAUrjeXnu/fyF5Py0/RXav4BBNs7n5Hx1WFhOEOWSAVjGeC3oKxDVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/assets/js/jq.caret.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>
