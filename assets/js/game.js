@@ -1,6 +1,8 @@
+//p1ngWin v0.1
 window.addEventListener('load', function (e) {
     const canvas = document.getElementById('game-viewport');
     const ctx2d = canvas.getContext('2d');
+    const game_overlay = document.getElementById('game-overlay');
     canvas.width = 960;
     canvas.height = 720;
 
@@ -24,8 +26,6 @@ window.addEventListener('load', function (e) {
     //props
     game_assets.set('bullet', '/assets/game/props/bullet.png');
     game_assets.set('cloud', '/assets/game/props/night_cloud.png');
-    game_assets.set('moon', '/assets/game/props/moon.png');
-
     game_assets.set('heart', '/assets/game/props/heart.png');
     game_assets.set('heart_bg', '/assets/game/props/heart_bg.png');
     game_assets.set('heart_border', '/assets/game/props/heart_border.png');
@@ -100,8 +100,8 @@ window.addEventListener('load', function (e) {
             this.width = 245;
             this.hitboxwidth = 200;
             this.hitboxheight = 250;
+            this.x = 50;
             this.y = 400;
-            this.x = 100;
             this.speed = 1;
             this.maxSpeed = 3;
             this.isUsingMelle = true;
@@ -420,7 +420,7 @@ window.addEventListener('load', function (e) {
             context.shadowOffsetY = 2;
             context.shadowColor = 'black';
 
-            if (this.game.isGameOver) {
+            if (this.game.isGameOver && this.game.isGameEverStarted) {
                 context.globalAlpha = 0.5;
                 context.fillStyle = '#cc11f0';
                 context.fillRect(0, 0, this.game.width, this.game.height);
@@ -461,7 +461,8 @@ window.addEventListener('load', function (e) {
             this.width = width;
             this.height = height;
             this.isDebugMode = false;
-            this.isGameOver = false;
+            this.isGameEverStarted = false;
+            this.isGameOver = true;
 
             //world variables
             this.speed = 1;
@@ -493,7 +494,12 @@ window.addEventListener('load', function (e) {
         start() {
             this.score = 0;
             this.player.lives = this.player.maxLives;
+            this.player.x = 50;
+            this.player.y = 400;
             this.isGameOver = false;
+            this.enemies.splice(0, this.enemies.length);
+            this.healthBoxes.splice(0, this.healthBoxes.length);
+            game_overlay.setAttribute('style', 'display: none !important');
         }
 
         update(deltaTime) {
@@ -512,6 +518,7 @@ window.addEventListener('load', function (e) {
                     enemy.mustBeDeleted = true;
                     if (this.player.lives <= 0) {
                         this.isGameOver = true;
+                        game_overlay.setAttribute('style', 'display: flex !important');
                     }
                     else {
                         this.player.hurt();
@@ -584,6 +591,12 @@ window.addEventListener('load', function (e) {
     }
 
     const game = new Game(canvas.width, canvas.height);
+
+    let startBtn = document.querySelector('#game-restart');
+    startBtn.addEventListener('click', function (e) {
+        game.start();
+    });
+
     let lastTick = 0;
     //kinda endless game loop
     function animate(timeStamp) {
