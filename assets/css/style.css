@@ -642,3 +642,14 @@ opacity: 1;
     margin: 0 0 20px 0;
   }
 }
+
+#game-viewport {
+  width: 100%;
+  height: 400px;
+  font-family: 'Aldrich';
+}
+
+#restart {
+  position: absolute;
+
+}

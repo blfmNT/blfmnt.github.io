@@ -117,6 +117,12 @@
     </div>
   </section>
 
+  <section class="container content" id="game">
+    <h3 class="text-center">Help P1ngWin survive from E-pandemic</h3>
+    <canvas id="game-viewport"></canvas>
+    <button id="restart">Restart</button>
+  </section>
+
   <section class="container content has-text-content" id="tools">
     <!-- <span class="tools-placeholder">Pretend that you can't c me, coz I'm lazy to add this on the fly</span> -->
     <h3 class="text-center">Tools</h3>
@@ -128,10 +134,10 @@
         <div class="window-body">
           <textarea name="ascii" id="ascii" class="form-control" height="200"></textarea>
           <div class="row mt-2">
-            <div class="col col-md-10 col-sm-6 d-flex flex-row-reverse">
+            <div class="col col-md-8 col-sm-6 d-flex flex-row-reverse">
               <input class="form-control" type="number" name="random-str-length" id="random-str-length" min="0" max="4096" step="1" placeholder="Length of random string" />
             </div>
-            <div class="col col-md-2 col-sm-6 d-flex flex-row-reverse"><button type="button" id="generate-random-string" class="btn btn-neon">Generate</button></div>
+            <div class="col col-md-4 col-sm-6 d-flex flex-row-reverse"><button type="button" id="generate-random-string" class="btn btn-neon">Generate</button></div>
           </div>
         </div>
       </div>
@@ -191,7 +197,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/nanogallery2/3.0.5/jquery.nanogallery2.min.js" integrity="sha512-tvpLVnZrWnnNzV2921XEMx4xkFTUF8xg3s+Mi6cvC/R7A6X1FkpBUXPJFa3Xh5uD9BvOZ2tHeYq/5ZqrweW86Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.5/js.cookie.min.js" integrity="sha512-nlp9/l96/EpjYBx7EP7pGASVXNe80hGhYAUrjeXnu/fyF5Py0/RXav4BBNs7n5Hx1WFhOEOWSAVjGeC3oKxDVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="/assets/js/jq.caret.js"></script>
+<script src="/assets/js/game.js"></script>
 <script src="/assets/js/main.js"></script>
 
-</body>
+`y>
 </html>
