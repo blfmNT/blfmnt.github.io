@@ -15,10 +15,10 @@ window.addEventListener('load', function (e) {
     game_assets.set('foreground', '/assets/game/backgrounds/foreground.png');
 
     //player
-    game_assets.set('player_walk', '/assets/game/player/walk.png');
-    game_assets.set('player_walk_shoot', '/assets/game/player/walk_shoot.png');
+    game_assets.set('player_walk', 'https://cdn.discordapp.com/attachments/893045779332222996/1182013877827936319/walk.png');
+    game_assets.set('player_walk_shoot', 'https://cdn.discordapp.com/attachments/893045779332222996/1182013877358182410/walk_shoot.png');
     game_assets.set('player_jump', '/assets/game/player/jump.png')
-    game_assets.set('player_hurt', '/assets/game/player/hurt.png');
+    game_assets.set('player_hurt', 'https://cdn.discordapp.com/attachments/893045779332222996/1182013876825509898/hurt.png');
 
     //enemies
     game_assets.set('IE', '/assets/game/enemies/IE.png');
