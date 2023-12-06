@@ -651,5 +651,5 @@ opacity: 1;
 
 #restart {
   position: absolute;
-
+  display: none;
 }
