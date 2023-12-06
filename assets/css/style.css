@@ -16,7 +16,7 @@ body {
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-image: url("/assets/img/lonely.png");
+  background-image: url('https://cdn.discordapp.com/attachments/893045779332222996/1182009143826075659/lonely.png');
   background-size: cover;
 }
 .noise-bg {

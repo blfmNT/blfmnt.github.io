@@ -86,10 +86,10 @@ function convertFromAscii(cf) {
     //it's kinda goofy rn
     if (cf !== 'url') {
       const url_data = encodeURIComponent(data).
-                      replaceAll('%20', '+').replaceAll('!', '%21').
-                      replaceAll('~', '%7E').replaceAll('*', '%2A').
-                      replaceAll('\'','%27').replaceAll('(', '%28').replaceAll(')', '%29');
-    url_ta.val(url_data);
+        replaceAll('%20', '+').replaceAll('!', '%21').
+        replaceAll('~', '%7E').replaceAll('*', '%2A').
+        replaceAll('\'', '%27').replaceAll('(', '%28').replaceAll(')', '%29');
+      url_ta.val(url_data);
     }
   }
 
@@ -165,7 +165,7 @@ function convertBase64ToAscii() {
       $('#ascii').val(ascii_data);
       convertFromAscii('base64');
     }
-    catch(ex) {
+    catch (ex) {
       $('#base64').addClass('window-invalid');
       console.error('convertBase64ToAscii thrown an exception: ', ex);
     }
@@ -177,10 +177,10 @@ function convertUrlToAscii() {
   var url_el = $('#url-encoded');
   const url_data = $('#url-encoded').val();
   var ascii_data;
-  try{
+  try {
     ascii_data = decodeURIComponent(url_data);
   }
-  catch(ex) {
+  catch (ex) {
     $(url_el).addClass('window-invalid');
     return;
   }
@@ -256,12 +256,12 @@ $(document).ready(function () {
     },
 
     thumbnailToolbarImage: null,
-    thumbnailL1Label: { display: true, position: 'center', valign: 'bottom', align: 'center', background: '#ff9aff'},
+    thumbnailL1Label: { display: true, position: 'center', valign: 'bottom', align: 'center', background: '#ff9aff' },
     thumbnailLabel: { display: false },
 
     items: [
       // cinema
-      { src: '/assets/img/showcase/cinema/1.png', title: 'Cinema', ID: 1, kind: 'album' },
+      { src: 'https://cdn.discordapp.com/attachments/893045779332222996/1182009481127792781/1.png', title: 'Cinema', ID: 1, kind: 'album' },
       { src: '/assets/img/showcase/cinema/1.png', ID: 10, albumID: 1 },
       { src: '/assets/img/showcase/cinema/2.png', ID: 11, albumID: 1 },
       { src: '/assets/img/showcase/cinema/3.png', ID: 12, albumID: 1 },
@@ -322,6 +322,7 @@ $(document).ready(function () {
       $('#ascii').val(generateRandomString(l));
     convertFromAscii();
   });
+
 
   typerAnimation();
 
