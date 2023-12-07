@@ -103,16 +103,16 @@
     <h3 class="text-center">Links</h3>
     <div class="container container-links">
       <a class="link" href="https://github.com/blfmNT" target="_blank">
-        <img src="/assets/img/logos/github.png" class="img-link"/>
+        <img src="/assets/img/logos/github.png" class="img-link" loading="lazy"/>
       </a>
       <a class="link" href="https://www.codewars.com/users/blfmNT" target="_blank">
-        <img src="/assets/img/logos/codewars.png" class="img-link"/>
+        <img src="/assets/img/logos/codewars.png" class="img-link" loading="lazy"/>
       </a>
       <a class="link" href="https://app.hackthebox.com/profile/51763" target="_blank">
-        <img src="/assets/img/logos/htb.ico" class="img-link"/>
+        <img src="/assets/img/logos/htb.ico" class="img-link" loading="lazy"/>
       </a>
       <a class="link" href="https://wakatime.com/@blfmNT" target="_blank">
-        <img src="/assets/img/logos/wakatime.png" class="img-link"/>
+        <img src="/assets/img/logos/wakatime.png" class="img-link" loading="lazy"/>
       </a>
     </div>
   </section>
@@ -121,9 +121,11 @@
     <h3 class="text-center">Help P1ngWin survive from E-pandemic</h3>
     <canvas id="game-viewport"></canvas>
     <div id="game-overlay" class="d-flex align-items-center justify-content-center">
-      <div class="container">
-        <div class="game-guide">Control - Arrows, Space - shoot</div>
-        <div class="btn btn-neon" id="game-restart">Start</div>
+      <div class="row">
+        <div class="game-guide">Arrows - control <br/>Space - shoot</div>
+        <div class="game-overlay-controls">
+          <div class="btn btn-game" id="game-restart">Start</div>
+        </div>
       </div>
     </div>
   </section>

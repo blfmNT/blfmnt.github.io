@@ -14,6 +14,10 @@ if (g_b_tools_activated) {
 function setToolsActivated(b) { g_b_tools_activated = b; }
 function getToolsActivated() { return g_b_tools_activated; }
 
+function userOnPhone() {
+  return (navigator.maxTouchPoints > 0);
+}
+
 function playHackermanAnimation() {
   $('<div class="hackerman"><span>HACKERMAN</span></div>').insertBefore('.noise');
   $('.hackerman').css({ 'display': 'block' }).animate({ opacity: 1 }, {
@@ -323,6 +327,10 @@ $(document).ready(function () {
     convertFromAscii();
   });
 
+
+  if (userOnPhone()) {
+    $('#game').hide();
+  }
 
   typerAnimation();
 

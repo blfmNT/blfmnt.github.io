@@ -1,8 +1,14 @@
 //p1ngWin v0.1
 window.addEventListener('load', function (e) {
+    if (navigator.maxTouchPoints > 0) {
+        return;
+    }
+
     const canvas = document.getElementById('game-viewport');
     const ctx2d = canvas.getContext('2d');
-    const game_overlay = document.getElementById('game-overlay');
+    const gameOverlay = document.getElementById('game-overlay');
+    const startBtn = document.querySelector('#game-restart');
+
     canvas.width = 960;
     canvas.height = 720;
 
@@ -17,7 +23,6 @@ window.addEventListener('load', function (e) {
     //player
     game_assets.set('player_walk', 'https://cdn.discordapp.com/attachments/893045779332222996/1182013877827936319/walk.png');
     game_assets.set('player_walk_shoot', 'https://cdn.discordapp.com/attachments/893045779332222996/1182013877358182410/walk_shoot.png');
-    game_assets.set('player_jump', '/assets/game/player/jump.png')
     game_assets.set('player_hurt', 'https://cdn.discordapp.com/attachments/893045779332222996/1182013876825509898/hurt.png');
 
     //enemies
@@ -35,6 +40,7 @@ window.addEventListener('load', function (e) {
     for (let [key, value] of game_assets) {
         const tmp = new Image();
         tmp.src = value;
+        tmp.setAttribute('loading', 'lazy');
         game_assets.set(key, tmp);
     }
 
@@ -106,8 +112,8 @@ window.addEventListener('load', function (e) {
             this.maxSpeed = 3;
             this.isUsingMelle = true;
             this.isUsingGun = false;
-            this.lives = 4;
             this.maxLives = 5;
+            this.lives = this.maxLives;
 
             this.jumped = false;
             this.jumpTimer = 0;
@@ -426,10 +432,10 @@ window.addEventListener('load', function (e) {
                 context.fillRect(0, 0, this.game.width, this.game.height);
                 context.globalAlpha = 1.0;
 
-                context.font = '60px Aldrich';
+                context.font = '80px Aldrich';
                 context.textAlign = 'center';
                 context.fillStyle = '#0bf4f3';
-                context.fillText('YOU LOST', this.game.width * 0.5, this.game.height * 0.5);
+                context.fillText('YOU LOST', this.game.width * 0.5, this.game.height * 0.3);
             }
 
             //draw score
@@ -497,9 +503,10 @@ window.addEventListener('load', function (e) {
             this.player.x = 50;
             this.player.y = 400;
             this.isGameOver = false;
+            this.isGameEverStarted = true;
             this.enemies.splice(0, this.enemies.length);
             this.healthBoxes.splice(0, this.healthBoxes.length);
-            game_overlay.setAttribute('style', 'display: none !important');
+            gameOverlay.setAttribute('style', 'display: none !important');
         }
 
         update(deltaTime) {
@@ -518,7 +525,8 @@ window.addEventListener('load', function (e) {
                     enemy.mustBeDeleted = true;
                     if (this.player.lives <= 0) {
                         this.isGameOver = true;
-                        game_overlay.setAttribute('style', 'display: flex !important');
+                        gameOverlay.setAttribute('style', 'display: flex !important');
+                        startBtn.innerHTML = 'Restart';
                     }
                     else {
                         this.player.hurt();
@@ -592,7 +600,6 @@ window.addEventListener('load', function (e) {
 
     const game = new Game(canvas.width, canvas.height);
 
-    let startBtn = document.querySelector('#game-restart');
     startBtn.addEventListener('click', function (e) {
         game.start();
     });
