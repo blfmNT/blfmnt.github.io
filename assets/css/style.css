@@ -580,6 +580,53 @@ section.has-text-content:hover {
   opacity: 1;
 }
 
+#game {
+  position: relative;
+}
+
+#game-viewport {
+  width: 100%;
+  height: 400px;
+  font-family: "Aldrich";
+}
+#game-overlay {
+  position: absolute;
+  top: 67px;
+  left: 10px;
+  width: 940px;
+  height: 400px;
+  background-color: rgba(44, 23, 23, 0.8);
+  text-align: center;
+}
+.game-guide {
+  background-color: rgba(247, 18, 189, 0.4);
+}
+.btn-game {
+  color: yellow;
+  border: 1px solid yellow;
+  border-radius: 0;
+  background-color: rgba(247, 18, 189, 0.25);
+  transition: all 1s ease;
+}
+.btn-game:hover {
+  color: yellow;
+  border: 1px solid yellow;
+  background-color: rgba(247, 18, 189, 0.5);
+}
+.game-overlay-controls {
+  margin-top: 8px;
+}
+#restart {
+  position: absolute;
+}
+
+@media only screen and (max-width: 991px) {
+  #game-overlay {
+    top: 113px;
+    width: 700px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .main-container {
     width: 100%;
@@ -592,6 +639,10 @@ section.has-text-content:hover {
   }
   .nav-item > a {
     font-size: 16px;
+  }
+  #game-overlay {
+    top: 113px;
+    width: 520px;
   }
 }
 @media only screen and (max-width: 575px) {
@@ -634,45 +685,4 @@ section.has-text-content:hover {
     padding: 20px;
     margin: 0 0 20px 0;
   }
-}
-
-#game {
-  position: relative;
-}
-
-#game-viewport {
-  width: 100%;
-  height: 400px;
-  font-family: "Aldrich";
-}
-#game-overlay {
-  position: absolute;
-  top: 67px;
-  left: 0;
-  width: 100%;
-  height: 400px;
-  background-color: rgba(44, 23, 23, 0.3);
-  text-align: center;
-  padding: 0 10px;
-}
-.game-guide {
-  background-color: rgba(247, 18, 189, 0.4);
-}
-.btn-game {
-  color: yellow;
-  border: 1px solid yellow;
-  border-radius: 0;
-  background-color: rgba(247, 18, 189, 0.25);
-  transition: all 1s ease;
-}
-.btn-game:hover {
-  color: yellow;
-  border: 1px solid yellow;
-  background-color: rgba(247, 18, 189, 0.5);
-}
-.game-overlay-controls {
-  margin-top: 8px;
-}
-#restart {
-  position: absolute;
 }
